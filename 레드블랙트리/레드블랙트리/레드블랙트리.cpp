@@ -31,9 +31,32 @@ int main()
 	wprintf(L" 통과 \n");
 	//*/
 
+	// 회전 테스트
+	/*/
+	tree.Insert(5);
+	tree.Insert(3);
+	tree.Insert(7);
 
+	// 회전 전 inorder
+	wprintf(L"회전 전: ");
+	tree.inorder_check(tree.root);  // root 접근용 getter 필요
 
+	// 강제 회전
+	tree.RotateLeft(tree.root);
 
+	// 회전 후 inorder
+	wprintf(L"\n회전 후: ");
+	tree.inorder_check(tree.root);
+	//*/
+
+	//*/
+	for (int i = 0; i < 1000; i++)
+		tree.Insert(rand() % 10000);
+
+	int prev = -1;
+	tree.Validate(tree.root, prev);
+	wprintf(L"검증 완료\n");
+	//*/
 
 	return 0;
 }

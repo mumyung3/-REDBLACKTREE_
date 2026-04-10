@@ -34,5 +34,15 @@ public:
 	void inorder_check(stNODE* node);
 
 	stNODE* CreateNodeWithNIL(const int& value);
+
+	// 우회전
+	void RotateRight(stNODE* node);
+	// 좌회전
+	void RotateLeft(stNODE* node);
+	// 레드 블랙 트리 규칙
+
+	void InsertFix(stNODE* node);
+	// ai 검증
+	void Validate(stNODE* node, int& prev);
 };
 
