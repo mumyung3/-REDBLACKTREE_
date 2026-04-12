@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "레드블랙트리", "레드블랙트리\레드블랙트리.vcxproj", "{2290F7F9-B0FE-49E5-B053-3CD3FEF64E6D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GUI", "GUI\GUI.vcxproj", "{29045CB9-9D8E-412B-92D6-D9ED152764B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{2290F7F9-B0FE-49E5-B053-3CD3FEF64E6D}.Release|x64.Build.0 = Release|x64
 		{2290F7F9-B0FE-49E5-B053-3CD3FEF64E6D}.Release|x86.ActiveCfg = Release|Win32
 		{2290F7F9-B0FE-49E5-B053-3CD3FEF64E6D}.Release|x86.Build.0 = Release|Win32
+		{29045CB9-9D8E-412B-92D6-D9ED152764B0}.Debug|x64.ActiveCfg = Debug|x64
+		{29045CB9-9D8E-412B-92D6-D9ED152764B0}.Debug|x64.Build.0 = Debug|x64
+		{29045CB9-9D8E-412B-92D6-D9ED152764B0}.Debug|x86.ActiveCfg = Debug|Win32
+		{29045CB9-9D8E-412B-92D6-D9ED152764B0}.Debug|x86.Build.0 = Debug|Win32
+		{29045CB9-9D8E-412B-92D6-D9ED152764B0}.Release|x64.ActiveCfg = Release|x64
+		{29045CB9-9D8E-412B-92D6-D9ED152764B0}.Release|x64.Build.0 = Release|x64
+		{29045CB9-9D8E-412B-92D6-D9ED152764B0}.Release|x86.ActiveCfg = Release|Win32
+		{29045CB9-9D8E-412B-92D6-D9ED152764B0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

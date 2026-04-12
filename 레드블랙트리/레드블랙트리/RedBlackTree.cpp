@@ -4,7 +4,7 @@ stNODE::stNODE(int value) : iData(value) {
 	Color = NODE_COLOR::RED;
 }
 
-RedBlackTree::RedBlackTree(): root(NIL) {
+RedBlackTree::RedBlackTree() : root(NIL) {
 	NIL->pLeft = NIL;
 	NIL->pParent = NIL;
 	NIL->pRight = NIL;
@@ -12,7 +12,7 @@ RedBlackTree::RedBlackTree(): root(NIL) {
 }
 
 void RedBlackTree::Insert(const int& value) {
-	
+
 	stNODE* newNode = CreateNodeWithNIL(value);
 
 	if (root == NIL) {
@@ -109,7 +109,7 @@ void RedBlackTree::RotateRight(stNODE* node)
 	if (root == N) {
 		root = A;
 	}
-	else if(N->pParent->pLeft == N){
+	else if (N->pParent->pLeft == N) {
 		N->pParent->pLeft = A;
 	}
 	else {
@@ -124,8 +124,8 @@ void RedBlackTree::RotateRight(stNODE* node)
 	A->pRight = N;
 	N->pParent = A;
 	N->pLeft = C;
-	
-	
+
+
 }
 
 void RedBlackTree::RotateLeft(stNODE* node)
@@ -134,7 +134,7 @@ void RedBlackTree::RotateLeft(stNODE* node)
 	stNODE* N = node;
 	stNODE* D = node->pRight;
 	stNODE* E = node->pRight->pLeft;
-	
+
 
 	if (root == N) {
 		root = D;
@@ -165,7 +165,7 @@ void RedBlackTree::RotateLeft(stNODE* node)
 void RedBlackTree::InsertFix(stNODE* node)
 {
 	// 부모가 블랙이면 문제 x
-	
+
 	// 부모
 	stNODE* parent = node->pParent;
 	// 할아버지
@@ -205,7 +205,7 @@ void RedBlackTree::InsertFix(stNODE* node)
 		InsertFix(GrandParent);
 		return;
 	}
-	
+
 
 
 	// 2. 부모 레드, 삼촌 블랙, 나는 부모의 오른쪽 레드 case.2
@@ -216,7 +216,7 @@ void RedBlackTree::InsertFix(stNODE* node)
 			parent = node->pParent;
 		}
 	}
-	else{
+	else {
 		if (GrandParent->pLeft == uncle) {
 			RotateRight(parent);
 			node = parent;
@@ -233,7 +233,7 @@ void RedBlackTree::InsertFix(stNODE* node)
 	else {
 		RotateRight(GrandParent);
 	}
-	
+
 	return;
 
 
